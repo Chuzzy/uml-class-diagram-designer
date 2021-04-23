@@ -1,0 +1,6 @@
+<?import javafx.scene.layout.*?>
+
+<fx:root type="VBox"
+    xmlns:fx="http://javafx.com/fxml">
+    <Label fx:id="classNameLabel" text="Class Name"/>
+</fx:root>
