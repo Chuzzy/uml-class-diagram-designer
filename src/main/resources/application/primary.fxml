@@ -12,7 +12,7 @@
             <MenuItem text="New"/>
             <MenuItem text="Open"/>
             <MenuItem text="Save"/>
-            <MenuItem text="Exit"/>
+            <MenuItem text="Exit" onAction="#exitApp"/>
          </Menu>
          <Menu text="Edit">
             <Menu text="New Class">
