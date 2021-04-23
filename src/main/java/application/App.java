@@ -29,7 +29,7 @@ public class App extends Application {
     }
 
     /**
-     * Sets the rooot of the current scene.
+     * Sets the root of the current scene.
      * 
      * @param fxml the name of the FXML file
      * @throws IOException if the FXML file can't be loaded
