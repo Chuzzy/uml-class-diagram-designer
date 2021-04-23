@@ -1,4 +1,5 @@
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
 
 <fx:root type="VBox"
     xmlns:fx="http://javafx.com/fxml">
