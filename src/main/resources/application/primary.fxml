@@ -8,9 +8,23 @@
 <BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PrimaryController">
    <top>
       <MenuBar>
-         <Menu text="File"/>
-         <Menu text="Edit"/>
-         <Menu text="About"/>
+         <Menu text="File">
+            <MenuItem text="New"/>
+            <MenuItem text="Open"/>
+            <MenuItem text="Save"/>
+            <MenuItem text="Exit"/>
+         </Menu>
+         <Menu text="Edit">
+            <Menu text="New Class">
+               <MenuItem text="Concrete"/>
+               <MenuItem text="Abstract"/>
+               <MenuItem text="Interface"/>
+            </Menu>
+         </Menu>
+         <Menu text="Help">
+            <MenuItem text="GitHub Wiki"/>
+            <MenuItem text="Help"/>
+         </Menu>
       </MenuBar>
    </top>
    <center>
