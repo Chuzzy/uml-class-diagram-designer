@@ -23,7 +23,7 @@
          </Menu>
          <Menu text="Help">
             <MenuItem text="GitHub Wiki"/>
-            <MenuItem text="Help"/>
+            <MenuItem text="About"/>
          </Menu>
       </MenuBar>
    </top>
