@@ -5,12 +5,22 @@ import java.util.List;
 
 public class Behaviour {
     private Access accessModifier;
+    private boolean isStatic;
     private String returnType;
     private List<Argument> arguments;
     private String name;
 
     public Behaviour(Access accessModifier, String returnType, String name, Argument... arguments) {
         this.accessModifier = accessModifier;
+        this.isStatic = false;
+        this.returnType = returnType;
+        this.name = name;
+        this.arguments = Arrays.asList(arguments);
+    }
+
+    public Behaviour(Access accessModifier, boolean isStatic, String returnType, String name, Argument... arguments) {
+        this.accessModifier = accessModifier;
+        this.isStatic = isStatic;
         this.returnType = returnType;
         this.name = name;
         this.arguments = Arrays.asList(arguments);
@@ -22,6 +32,14 @@ public class Behaviour {
 
     public void setAccessModifier(Access accessModifier) {
         this.accessModifier = accessModifier;
+    }
+
+    public boolean isStatic() {
+        return isStatic;
+    }
+
+    public void setStatic(boolean isStatic) {
+        this.isStatic = isStatic;
     }
 
     public String getReturnType() {
