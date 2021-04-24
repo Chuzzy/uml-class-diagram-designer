@@ -2,5 +2,7 @@
 <?import javafx.scene.control.*?>
 
 <fx:root type="VBox" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-    <Button text="New attribute" />
+    <Label text="+ getMyAttribute(): int"/>
+    <Label text="+ myOperation(): void"/>
+    <Button text="New operation"/>
 </fx:root>
