@@ -3,14 +3,14 @@ package uml;
 import java.util.Arrays;
 import java.util.List;
 
-public class Behaviour {
+public class Operation {
     private Access accessModifier;
     private boolean isStatic;
     private String returnType;
     private List<Argument> arguments;
     private String name;
 
-    public Behaviour(Access accessModifier, String returnType, String name, Argument... arguments) {
+    public Operation(Access accessModifier, String returnType, String name, Argument... arguments) {
         this.accessModifier = accessModifier;
         this.isStatic = false;
         this.returnType = returnType;
@@ -18,7 +18,7 @@ public class Behaviour {
         this.arguments = Arrays.asList(arguments);
     }
 
-    public Behaviour(Access accessModifier, boolean isStatic, String returnType, String name, Argument... arguments) {
+    public Operation(Access accessModifier, boolean isStatic, String returnType, String name, Argument... arguments) {
         this.accessModifier = accessModifier;
         this.isStatic = isStatic;
         this.returnType = returnType;
@@ -81,7 +81,7 @@ public class Behaviour {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Behaviour other = (Behaviour) obj;
+        Operation other = (Operation) obj;
         if (accessModifier != other.accessModifier)
             return false;
         if (arguments == null) {
@@ -105,6 +105,6 @@ public class Behaviour {
     @Override
     public String toString() {
         String[] argsString = arguments.stream().map(arg -> arg.getType() + " " + arg.getName()).toArray(String[]::new);
-        return String.format("Behaviour [%s %s %s(%s)]", accessModifier, returnType, name, String.join(", ", argsString));
+        return String.format("Operation [%s %s %s(%s)]", accessModifier, returnType, name, String.join(", ", argsString));
     }
 }
