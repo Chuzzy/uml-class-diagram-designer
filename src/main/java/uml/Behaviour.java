@@ -1,7 +1,7 @@
 package uml;
 
-import java.util.List;
 import java.util.Arrays;
+import java.util.List;
 
 public class Behaviour {
     private Access accessModifier;
@@ -86,10 +86,7 @@ public class Behaviour {
 
     @Override
     public String toString() {
-        StringBuilder argString = new StringBuilder();
-        for (Argument argument : arguments) {
-            argString.append(argument.getType() + " " + argument.getName() + ", ");
-        }
-        return String.format("Behaviour [%s %s %s(%s)]", accessModifier, returnType, name, argString.substring(0, argString.length() - 2));
+        String[] argsString = arguments.stream().map(arg -> arg.getType() + " " + arg.getName()).toArray(String[]::new);
+        return String.format("Behaviour [%s %s %s(%s)]", accessModifier, returnType, name, String.join(", ", argsString));
     }
 }
