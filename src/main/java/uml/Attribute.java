@@ -2,11 +2,20 @@ package uml;
 
 public class Attribute {
     private Access accessModifier;
+    private boolean isStatic;
     private String type;
     private String name;
 
     public Attribute(Access accessModifier, String type, String name) {
         this.accessModifier = accessModifier;
+        this.isStatic = false;
+        this.type = type;
+        this.name = name;
+    }
+
+    public Attribute(Access accessModifier, boolean isStatic, String type, String name) {
+        this.accessModifier = accessModifier;
+        this.isStatic = isStatic;
         this.type = type;
         this.name = name;
     }
@@ -17,6 +26,14 @@ public class Attribute {
 
     public void setAccessModifier(Access accessModifier) {
         this.accessModifier = accessModifier;
+    }
+
+    public boolean isStatic() {
+        return isStatic;
+    }
+
+    public void setStatic(boolean isStatic) {
+        this.isStatic = isStatic;
     }
 
     public String getType() {
