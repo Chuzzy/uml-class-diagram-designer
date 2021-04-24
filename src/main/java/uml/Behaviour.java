@@ -86,7 +86,10 @@ public class Behaviour {
 
     @Override
     public String toString() {
-        return "Behaviour [accessModifier=" + accessModifier + ", arguments=" + arguments + ", name=" + name
-                + ", returnType=" + returnType + "]";
+        StringBuilder argString = new StringBuilder();
+        for (Argument argument : arguments) {
+            argString.append(argument.getType() + " " + argument.getName() + ", ");
+        }
+        return String.format("Behaviour [%s %s %s(%s)]", accessModifier, returnType, name, argString.substring(0, argString.length() - 2));
     }
 }
