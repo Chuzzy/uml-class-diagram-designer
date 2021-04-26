@@ -25,6 +25,10 @@ public class Argument {
         this.name = name;
     }
 
+    public String asJavaCode() {
+        return type + " " + name;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -58,6 +62,6 @@ public class Argument {
 
     @Override
     public String toString() {
-        return "Argument [" + type + " " + name + "]";
+        return "Argument [" + asJavaCode() + "]";
     }
 }

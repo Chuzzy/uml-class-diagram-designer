@@ -52,6 +52,10 @@ public class Attribute {
         this.name = name;
     }
 
+    public String asJavaCode() {
+        return accessModifier + " " + type + " " + name;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -88,6 +92,6 @@ public class Attribute {
 
     @Override
     public String toString() {
-        return "Attribute [" + accessModifier + " " + type + " " + name + "]";
+        return "Attribute [" + asJavaCode() + "]";
     }
 }

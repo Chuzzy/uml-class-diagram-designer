@@ -62,6 +62,10 @@ public class Operation {
         this.name = name;
     }
 
+    public String asJavaCode() {
+        return accessModifier + " " + returnType + " " + name + "(" + argsString() + ") {}";
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -104,7 +108,7 @@ public class Operation {
 
     @Override
     public String toString() {
-        return String.format("Operation [%s %s %s(%s)]", accessModifier, returnType, name, argsString());
+        return String.format("Operation [" + asJavaCode() + "]");
     }
 
     /**
@@ -129,7 +133,7 @@ public class Operation {
      * @return string representation of this operation's arguments
      */
     private String argsString() {
-        String[] argsString = arguments.stream().map(arg -> arg.getType() + " " + arg.getName()).toArray(String[]::new);
+        String[] argsString = arguments.stream().map(arg -> arg.asJavaCode()).toArray(String[]::new);
         return String.join(", ", argsString);
     }
 }
