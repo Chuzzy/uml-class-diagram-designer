@@ -104,7 +104,32 @@ public class Operation {
 
     @Override
     public String toString() {
+        return String.format("Operation [%s %s %s(%s)]", accessModifier, returnType, name, argsString());
+    }
+
+    /**
+     * <p>
+     * Returns the representation of the arguments of this operation as they would
+     * appear in a C-style language.
+     * </p>
+     * 
+     * <p>
+     * For example:
+     * </p>
+     * 
+     * <pre>
+     * Operation op = new Operation(Access.PRIVATE, false, "void", "doSomething", new Argument("int", "a"), new Argument("String", "b"));
+     * </pre>
+     * 
+     * <p>
+     * The result of {@code op.argString()} would be the string
+     * {@code int a, String b}
+     * </p>
+     * 
+     * @return string representation of this operation's arguments
+     */
+    private String argsString() {
         String[] argsString = arguments.stream().map(arg -> arg.getType() + " " + arg.getName()).toArray(String[]::new);
-        return String.format("Operation [%s %s %s(%s)]", accessModifier, returnType, name, String.join(", ", argsString));
+        return String.join(", ", argsString);
     }
 }
