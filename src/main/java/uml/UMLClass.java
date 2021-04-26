@@ -8,9 +8,13 @@ public class UMLClass {
     private String name;
 
     public UMLClass() {
+        this("");
+    }
+
+    public UMLClass(String name) {
         attributes = new ArrayList<>();
         operations = new ArrayList<>();
-        name = "";
+        this.name = name;
     }
 
     public ArrayList<Attribute> getAttributes() {
