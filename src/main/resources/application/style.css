@@ -1,0 +1,13 @@
+UMLClass {
+    -fx-max-width: 200px;
+    -fx-max-height: 400px;
+    -fx-background-color: #d4d4d4;
+    -fx-border-width: 40px;
+    -fx-border-radius: 2px;
+}
+
+#classNameLabel {
+    -fx-font-size: 20px;
+    -fx-text-alignment: center;
+    -fx-max-width: 800px;
+}
