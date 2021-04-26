@@ -2,16 +2,16 @@ package uml;
 
 import java.util.ArrayList;
 
-public class UMLClass {
+public class Class {
     private ArrayList<Attribute> attributes;
     private ArrayList<Operation> operations;
     private String name;
 
-    public UMLClass() {
+    public Class() {
         this("");
     }
 
-    public UMLClass(String name) {
+    public Class(String name) {
         attributes = new ArrayList<>();
         operations = new ArrayList<>();
         this.name = name;
