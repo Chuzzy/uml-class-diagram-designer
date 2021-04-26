@@ -28,8 +28,8 @@
       </MenuBar>
    </top>
    <center>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
-      <UMLClass className="MyClass"/>
+      <StackPane>
+         <UMLClass className="MyClass"/>
+      </StackPane>
    </center>
 </BorderPane>
