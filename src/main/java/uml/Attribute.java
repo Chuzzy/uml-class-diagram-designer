@@ -53,7 +53,7 @@ public class Attribute {
     }
 
     public String asJavaCode() {
-        return accessModifier + " " + type + " " + name + ";";
+        return (accessModifier != Access.PACKAGE ? accessModifier + " " : "") + type + " " + name + ";";
     }
 
     @Override
