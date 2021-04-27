@@ -26,6 +26,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("primary"), 640, 480);
         setStyle("style");
+        stage.setTitle("UML Class Diagram Designer");
         stage.setScene(scene);
         stage.show();
     }
