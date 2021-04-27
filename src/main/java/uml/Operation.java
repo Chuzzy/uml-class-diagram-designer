@@ -63,7 +63,7 @@ public class Operation {
     }
 
     public String asJavaCode() {
-        return accessModifier + " " + returnType + " " + name + "(" + argsString() + ") {}";
+        return (accessModifier != Access.PACKAGE ? accessModifier + " " : "") + returnType + " " + name + "(" + argsString() + ") {}";
     }
 
     @Override
