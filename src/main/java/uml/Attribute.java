@@ -53,7 +53,7 @@ public class Attribute {
     }
 
     public String asJavaCode() {
-        return accessModifier + " " + type + " " + name;
+        return accessModifier + " " + type + " " + name + ";";
     }
 
     @Override

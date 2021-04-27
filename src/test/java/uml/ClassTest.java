@@ -30,8 +30,9 @@ public class ClassTest {
         @Test
         @DisplayName("outputs Java code with one attribute in it")
         void outputsJavaCodeWithOneAttribute() {
-            assertEquals(String.join("\n", "public class SimpleClass {", "    public int value;", "}", ""),
-                    umlClass.generateJavaCode(false, false, 4));
+            String expected = String.join("\n", "public class SimpleClass {", "    public int value;", "", "}", "");
+            String actual = umlClass.generateJavaCode(false, false, 4);
+            assertEquals(expected, actual);
         }
     }
 }
