@@ -35,4 +35,22 @@ public class ClassTest {
             assertEquals(expected, actual);
         }
     }
+
+    @Nested
+    @DisplayName("when it has one operation")
+    class oneOperation {
+        @BeforeEach
+        void createClassWithOneOperation() {
+            umlClass = new Class("BasicClass");
+            umlClass.addOperation(new Operation(Access.PACKAGE, "boolean", "foo", new Argument("String", "bar")));
+        }
+
+        @Test
+        @DisplayName("outputs Java code with one operation in it")
+        void outputsJavaCodeWithOperationInIt() {
+            String expected = String.join("\n", "public class BasicClass {", "", "    boolean foo(String bar) {}", "}", "");
+            String actual = umlClass.generateJavaCode(false, false, 4);
+            assertEquals(expected, actual);
+        }
+    }
 }
