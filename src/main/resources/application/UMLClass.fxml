@@ -1,11 +1,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
-<?import application.AttributeList?>
-<?import application.OperationList?>
 
 <fx:root type="VBox"
     xmlns:fx="http://javafx.com/fxml">
     <Label fx:id="classNameLabel" text="Class Name"/>
-    <AttributeList/>
-    <OperationList/>
+    <VBox>
+        <Label text="+ getMyAttribute(): int"/>
+        <Label text="+ myOperation(): void"/>
+        <Button text="New operation"/>
+    </VBox>
+    <VBox>
+        <Label text="- myAttribute: int"/>
+        <Button text="New attribute" />
+    </VBox>
 </fx:root>
