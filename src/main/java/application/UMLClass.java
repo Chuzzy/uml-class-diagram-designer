@@ -6,9 +6,13 @@ import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import uml.Class;
 
 public class UMLClass extends VBox {
+
+    private Class _class;
 
     @FXML
     private Label classNameLabel;
@@ -23,6 +27,7 @@ public class UMLClass extends VBox {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        _class = new Class();
     }
 
     public StringProperty classNameProperty() {
@@ -37,4 +42,9 @@ public class UMLClass extends VBox {
         classNameProperty().set(className);
     }
 
+    @FXML
+    private void onClickAttribute(MouseEvent me) {
+        Label source = (Label) me.getSource();
+        System.out.println("Attribute clicked: " + source.getText());
+    }
 }
