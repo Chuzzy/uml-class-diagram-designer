@@ -16,6 +16,10 @@ public class UMLClass extends VBox {
 
     @FXML
     private Label classNameLabel;
+    @FXML
+    private VBox attributeList;
+    @FXML
+    private VBox operationList;
 
     public UMLClass() {
         FXMLLoader loader = new FXMLLoader(UMLClass.class.getResource("UMLClass.fxml"));
