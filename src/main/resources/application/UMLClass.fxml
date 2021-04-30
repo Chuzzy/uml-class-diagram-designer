@@ -1,8 +1,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
-<fx:root type="VBox"
-    xmlns:fx="http://javafx.com/fxml">
+<fx:root type="VBox" xmlns:fx="http://javafx.com/fxml">
     <Label fx:id="classNameLabel" text="Class Name"/>
     <VBox>
         <Label text="- myAttribute: int"/>
